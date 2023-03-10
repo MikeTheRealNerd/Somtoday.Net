@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace Somtoday.Net.Entities;
+namespace Somtoday.Net.WebObjects;
 
-public abstract class Entity
+public abstract class WebObject
 {
     public SomtodayClient Client { get; set; }
 
@@ -23,7 +23,7 @@ public abstract class Entity
         return true;
     }
 
-    internal static T Get<T>(SomtodayClient client, JToken json) where T : Entity, new()
+    internal static T Get<T>(SomtodayClient client, JToken json) where T : WebObject, new()
     {
         var entity = new T();
         entity.Client = client;

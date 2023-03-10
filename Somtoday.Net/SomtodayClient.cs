@@ -1,11 +1,16 @@
 ﻿using Newtonsoft.Json.Linq;
-using Somtoday.Net.Entities;
+using Somtoday.Net.WebObjects;
 
 namespace Somtoday.Net;
 
 public class SomtodayClient
 {
-    internal readonly HttpClient Http = new();
+    internal const string BaseUrl = "https://somtoday.nl";
+
+    internal readonly HttpClient Http = new()
+    {
+        BaseAddress = new Uri(BaseUrl)
+    };
 
     public SomtodayClient()
     {

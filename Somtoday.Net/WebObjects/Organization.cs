@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace Somtoday.Net.Entities;
+namespace Somtoday.Net.WebObjects;
 
-public class Organization : Entity
+public class Organization : WebObject
 {
     protected override string? UpdateUrl => null;
 
